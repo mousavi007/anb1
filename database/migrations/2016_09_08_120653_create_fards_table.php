@@ -15,6 +15,8 @@ class CreateFardsTable extends Migration
     {
         Schema::create('fards', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('name');
+            $table->string('vahed');
             $table->timestamps();
         });
     }
