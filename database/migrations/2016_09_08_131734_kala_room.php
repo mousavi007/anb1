@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateRoomsTable extends Migration
+class KalaRoom extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,11 @@ class CreateRoomsTable extends Migration
      */
     public function up()
     {
-        Schema::create('rooms', function (Blueprint $table) {
-            $table->increments('id');
-            $table->smallInteger('num');
-            $table->string('type');
-            $table->smallInteger('dakheli');
+        Schema::create('kala_room', function (Blueprint $table) {
+            $table->integer('code_amval');
+            $table->primary('code_amval');
+            $table->integer('kala_id');
+            $table->integer('room_id');
             $table->timestamps();
         });
     }
@@ -29,6 +29,6 @@ class CreateRoomsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('rooms');
+        Schema::dropIfExists('kala_room');
     }
 }
