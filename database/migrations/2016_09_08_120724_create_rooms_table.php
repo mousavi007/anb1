@@ -16,6 +16,8 @@ class CreateRoomsTable extends Migration
         Schema::create('rooms', function (Blueprint $table) {
             $table->increments('id');
             $table->smallInteger('num');
+            $table->integer('fard_id');
+            $table->foreign()->references('id')->on('fards');
             $table->string('type');
             $table->smallInteger('dakheli');
             $table->timestamps();

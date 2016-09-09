@@ -18,6 +18,8 @@ class KalaRoom extends Migration
             $table->primary('code_amval');
             $table->integer('kala_id');
             $table->integer('room_id');
+            $table->string('company');
+            $table->string('model');
             $table->timestamps();
         });
     }
