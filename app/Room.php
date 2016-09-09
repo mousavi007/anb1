@@ -11,6 +11,6 @@ class Room extends Model
         return $this->belongsTo('App\Fard');
     }
     public function kala() {
-        return $this->belongsToMany('App\Kala', 'kala_room', 'room_id', 'kala_id'); // this matches the Eloquent model
+        return $this->belongsToMany('App\Kala', 'kala_room', 'room_id', 'kala_id')->withPivot('code_amval')->withTimestamps();
     }
 }
