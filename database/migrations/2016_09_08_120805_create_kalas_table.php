@@ -19,6 +19,12 @@ class CreateKalasTable extends Migration
             $table->integer('group_id');
             $table->foreign('group_id')->reference('id')->on('group_kalas');
             $table->timestamps();
+            $table->integer('code_amval');
+            $table->unique('code_amval');
+            $table->date('start_garranty');
+            $table->date('end_garranty');
+            $table->string('company');
+            $table->string('model');
         });
     }
 

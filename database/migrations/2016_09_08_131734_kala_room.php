@@ -14,12 +14,10 @@ class KalaRoom extends Migration
     public function up()
     {
         Schema::create('kala_room', function (Blueprint $table) {
-            $table->integer('code_amval');
-            $table->primary('code_amval');
+            
             $table->integer('kala_id');
             $table->integer('room_id');
-            $table->string('company');
-            $table->string('model');
+            
             $table->timestamps();
         });
     }
