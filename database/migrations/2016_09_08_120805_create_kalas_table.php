@@ -17,7 +17,6 @@ class CreateKalasTable extends Migration
             $table->increments('id');
             $table->string('name');
             $table->integer('group_id');
-            $table->foreign('group_id')->reference('id')->on('group_kalas');
             $table->timestamps();
             $table->integer('code_amval');
             $table->unique('code_amval');

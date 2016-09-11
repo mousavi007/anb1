@@ -9,14 +9,20 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="{{ route('dashboard') }}">Brand</a>
+                <a class="navbar-brand" href="">Brand</a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a href="{{route('logout')}}">Logout</a></li>
+                    @if (Auth::check())
+                        <li><a href=" ">logout</a></li>
+                    @else
+                        <li><a href=" ">login</a></li>
+                    @endif
+
                 </ul>
+
 
             </div><!-- /.navbar-collapse -->
         </div><!-- /.container-fluid -->
