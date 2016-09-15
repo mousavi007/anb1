@@ -2,7 +2,9 @@
 @section('title')
     Welcome!
 @endsection
-
+@section('header')
+    @include('includes.header')
+@endsection
 @section('content')
     <div class="center" >
     <button type="button" id="myButton"  class=" btn btn-primary btn-lg btn-block" autocomplete="off">
