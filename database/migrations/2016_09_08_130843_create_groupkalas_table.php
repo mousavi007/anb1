@@ -13,7 +13,7 @@ class CreateGroupKalasTable extends Migration
      */
     public function up()
     {
-        Schema::create('group_kalas', function (Blueprint $table) {
+        Schema::create('groupkalas', function (Blueprint $table) {
             $table->increments('id');
             $table->string('group');
             $table->timestamps();

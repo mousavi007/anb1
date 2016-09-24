@@ -10,6 +10,6 @@ class Kala extends Model
         return $this->belongsTo('App\Group_kala');
     }
     public function room() {
-        return $this->belongsToMany('App\Room', 'kala_room')->withTimestamps();
+        return $this->belongsTo('App\Room', 'kala_room')->withTimestamps();
     }
 }

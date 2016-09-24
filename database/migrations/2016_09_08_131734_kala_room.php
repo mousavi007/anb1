@@ -15,10 +15,12 @@ class KalaRoom extends Migration
     {
         Schema::create('kala_room', function (Blueprint $table) {
             
-            $table->integer('kala_id');
-            $table->integer('room_id');
-            
+            $table->integer('kala_id')->unsigned();
+            $table->foreign('kala_id')->references('id')->on('kalas');
+            $table->integer('room_id')->unsigned();
+            $table->foreign('room_id')->references('id')->on('rooms');
             $table->timestamps();
+            
         });
     }
 

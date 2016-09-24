@@ -16,10 +16,12 @@ class CreateRoomsTable extends Migration
         Schema::create('rooms', function (Blueprint $table) {
             $table->increments('id');
             $table->smallInteger('num');
-            $table->integer('fards_id');
+            $table->integer('fards_id')->unsigned();
+            $table->foreign('fards_id')->references('id')->on('fards');
             $table->string('type');
             $table->smallInteger('dakheli');
             $table->timestamps();
+            Schema::enableForeignKeyConstraints();
         });
     }
 

@@ -11,6 +11,6 @@ class Room extends Model
         return $this->belongsTo('App\Fard');
     }
     public function kala() {
-        return $this->belongsToMany('App\Kala', 'kala_room')->withTimestamps();
+        return $this->hasMany('App\Kala', 'kala_room')->withTimestamps();
     }
 }
