@@ -17,7 +17,7 @@ class CreateKalasTable extends Migration
             $table->increments('id');
             $table->string('name');
             $table->integer('groupkalas_id')->unsigned();
-           // $table->foreign('groupkalas_id')->references('id')->on('groupkalas');
+            $table->foreign('groupkalas_id')->references('id')->on('groupkalas');
             $table->timestamps();
             $table->integer('code_amval');
             $table->unique('code_amval');
@@ -25,6 +25,8 @@ class CreateKalasTable extends Migration
             $table->date('end_garranty');
             $table->string('company');
             $table->string('model');
+            Schema::enableForeignKeyConstraints();
+
         });
     }
     /**
