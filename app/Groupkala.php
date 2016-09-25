@@ -4,9 +4,9 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Group_kala extends Model
+class Groupkala extends Model
 {
-    public function kala() {
+   public function kala() {
         return $this->hasMany('App\Kala');
     }
 }
