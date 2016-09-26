@@ -11,8 +11,24 @@ use Illuminate\Support\Facades\DB;
 | to using a Closure or controller method. Build something great!
 |
 */
+Route::group(['middleware' => 'web'],function (){
+    Route::get('/', function () {
+        return view('welcome');
+    });
 
-Route::get('/', function () {
-    return view('welcome');
+    Route::get('/home', [
+        'uses'=>'UserController@gethome',
+        'as'=>'home',
+    ])->middleware('auth');
+
+    Route::post('signin',[
+        'uses'=>'UserController@signin',
+        'as'=>'signin'
+    ]);
+
+Route::post('signup',[
+    'uses'=>'UserController@signup',
+    'as'=>'signup'
+]);
+
 });
-

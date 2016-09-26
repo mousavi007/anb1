@@ -18,6 +18,8 @@ class CreateKalasTable extends Migration
             $table->string('name');
             $table->integer('groupkalas_id')->unsigned();
             $table->foreign('groupkalas_id')->references('id')->on('groupkalas');
+            $table->integer('room_id')->unsigned();
+            $table->foreign('room_id')->references('id')->on('rooms');
             $table->timestamps();
             $table->integer('code_amval');
             $table->unique('code_amval');
