@@ -38,4 +38,8 @@ class UserController extends Controller
         Auth::login($user);
         return redirect()->route('home');
     }
+
+    public function signout(){
+        
+    }
 }

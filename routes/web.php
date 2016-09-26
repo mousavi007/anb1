@@ -31,4 +31,8 @@ Route::post('signup',[
     'as'=>'signup'
 ]);
 
+    Route::get('signout',[
+        'uses'=>'UserController@signout',
+        'as'=>'signup'
+    ]);
 });
