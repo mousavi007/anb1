@@ -36,8 +36,8 @@
                 <div class="loginmodal-container">
                     <h1>شناسه و رمز عبور را وارد کنید</h1><br>
                     <form action="{{ Route('signin') }}" method="post">
-                        <input type="text" name="user" placeholder="شناسه">
-                        <input type="password" name="pass" placeholder="رمز عبور">
+                        <input type="text" name="username" placeholder="شناسه">
+                        <input type="password" name="password" placeholder="رمز عبور">
                         <input type="submit" name="login" class="login loginmodal-submit" value="ورود">
                         <input type="hidden" name="_token" value="{{ Session::token() }}">
                     </form>

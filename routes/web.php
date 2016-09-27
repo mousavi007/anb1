@@ -14,7 +14,7 @@ use Illuminate\Support\Facades\DB;
 Route::group(['middleware' => 'web'],function (){
     Route::get('/', function () {
         return view('welcome');
-    });
+    })->name('welcome');
 
     Route::get('/home', [
         'uses'=>'UserController@gethome',
@@ -33,6 +33,6 @@ Route::post('signup',[
 
     Route::get('signout',[
         'uses'=>'UserController@signout',
-        'as'=>'signup'
+        'as'=>'signout'
     ]);
 });
