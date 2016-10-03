@@ -1,5 +1,5 @@
 <header>
-    <nav class="navbar navbar-default">
+    <nav class="navbar navbar-default navbar-fixed-top">
         <div class="container-fluid">
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
@@ -20,6 +20,20 @@
                     @else
                         <li><a href=" ">login</a></li>
                     @endif
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">form<span class="caret"></span></a>
+
+                            <ul class="dropdown-menu">
+                                <li><a href="#">تعریف گروه کالا</a></li>
+                                <li><a href="#">تعریف فرد</a></li>
+                                <li><a href="#">تعریف اتاق</a></li>
+                                <li><a href="#">تعریف کالا</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">report</a>
+                        </li>
+                        <li><a href="{{ Route('signout') }}">setting</a></li>
 
                 </ul>
 
