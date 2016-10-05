@@ -36,7 +36,7 @@ Route::post('signup',[
         'as'=>'signout'
     ]);
     Route::get('/groupkala', [
-        'uses'=>'GroupKala@manage',
-        'as'=>'garoupkala',
+        'uses'=>'Group_Kala@manage',
+        'as'=>'groupkala',
     ])->middleware('auth');
 });

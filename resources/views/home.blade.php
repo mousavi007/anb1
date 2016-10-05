@@ -3,5 +3,5 @@
     Welcome!
 @endsection
 @section('header')
-@include('includes.header')
+    @include('includes.header')
 @endsection

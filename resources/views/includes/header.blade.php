@@ -1,5 +1,8 @@
 <header>
-    <nav class="navbar navbar-default navbar-fixed-top">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <nav class="navbar navbar-default">
         <div class="container-fluid">
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
@@ -24,7 +27,7 @@
                             <a class="dropdown-toggle" data-toggle="dropdown" href="#">form<span class="caret"></span></a>
 
                             <ul class="dropdown-menu">
-                                <li><a href="#">تعریف گروه کالا</a></li>
+                                <li><a href="{{Route('groupkala')}}">تعریف گروه کالا</a></li>
                                 <li><a href="#">تعریف فرد</a></li>
                                 <li><a href="#">تعریف اتاق</a></li>
                                 <li><a href="#">تعریف کالا</a></li>
