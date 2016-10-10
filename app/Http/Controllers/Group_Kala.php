@@ -13,4 +13,10 @@ class Group_Kala extends Controller
         $groupkalas=Groupkala::all();
         return view('groupkala',['groupkalas' => $groupkalas]);
     }
+    public function updategroup(Request $request){
+        $group=Groupkala::where('group',$request->group_qabl)->first();
+        $group->group=$request->groupbodys;
+        $group->save();
+        return redirect()->back();
+    }
 }

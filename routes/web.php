@@ -39,4 +39,9 @@ Route::post('signup',[
         'uses'=>'Group_Kala@manage',
         'as'=>'groupkala',
     ])->middleware('auth');
+    
+    Route::post('updategroup',[
+        'uses'=>'Group_Kala@updategroup',
+        'as'=>'updategroup'
+    ])->middleware('auth');
 });
