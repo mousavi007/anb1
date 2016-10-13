@@ -19,4 +19,11 @@ class Group_Kala extends Controller
         $group->save();
         return redirect()->back();
     }
+    public function addgroup(Request $request){
+        $group=new Groupkala();
+        $group->group=$request->groupname;
+        $group->save();
+        return redirect()->back();
+    }
+
 }

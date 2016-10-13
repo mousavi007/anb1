@@ -11,6 +11,9 @@
 @foreach($groupkalas as $group)
     <div class="well wellright well-sm"> <h3> <strong>{{ $group->group }} </strong></h3> <a id="myButton" href="#" class="btn btn-warning" role="button" autocomplete="off" data-toggle="modal" data-target="#login-modal1" data-whatever="{{ $group->group }}">ویرایش</a> <a href="#" class="btn btn-danger" role="button">حذف</a></div>
     @endforeach
+        <div class="center" >
+        <a href="#" class="btn btn-primary btn-lg btn-block" role="button" data-toggle="modal" data-target="#login-modal2">جدید</a>
+            </div>
         <div class="modal fade" id="login-modal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
             <div class="modal-dialog">
                 <div class="loginmodal-container">
@@ -20,6 +23,20 @@
                         <input type="submit" name="submit" class="login loginmodal-submit" value="ثبت">
                         <input type="hidden" name="_token" value="{{ Session::token() }}">
                         <input type="hidden" name="group_qabl" id="group_qabl">
+                    </form>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="login-modal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+            <div class="modal-dialog">
+                <div class="loginmodal-container">
+                    <h1> گروه کالای جدید</h1><br>
+                    <form action="{{ Route('addgroup') }}" method="post">
+                        <input type="text" name="groupname" id="groupname">
+                        <input type="submit" name="submit" class="login loginmodal-submit" value="ثبت">
+                        <input type="hidden" name="_token" value="{{ Session::token() }}">
                     </form>
 
                 </div>
