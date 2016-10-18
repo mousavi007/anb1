@@ -26,6 +26,9 @@ class Group_Kala extends Controller
         return redirect()->back();
     }
     public function delgroup(Request $request){
-        
+        $id=$request->group_id;
+        $group=Groupkala::where('id',$id);
+        $group->delete();
+        return redirect()->back();
     }
 }
