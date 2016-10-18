@@ -49,4 +49,9 @@ Route::post('signup',[
         'uses'=>'Group_Kala@addgroup',
         'as'=>'addgroup'
     ])->middleware('auth');
+
+    Route::post('delgroup',[
+        'uses'=>'Group_kala@delgroup',
+        'as'=>'delgroup'
+    ])->middleware('auth');
 });

@@ -25,5 +25,7 @@ class Group_Kala extends Controller
         $group->save();
         return redirect()->back();
     }
-
+    public function delgroup(Request $request){
+        
+    }
 }
