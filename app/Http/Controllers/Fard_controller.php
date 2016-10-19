@@ -4,13 +4,12 @@ use App\Fard;
 use App\Groupkala;
 use App\User;
 use Illuminate\Http\Request;
-class Fard extends Controller
+use App\Http\Controllers\Controller;
+class Fard_controller extends Controller
 {
     public function manage(){
 
         $fards=Fard::all();
         return view('fard',['fards' => $fards]);
     }
-    
-    
 }

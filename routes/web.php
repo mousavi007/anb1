@@ -56,7 +56,7 @@ Route::post('signup',[
     ])->middleware('auth');
 
     Route::get('/fard', [
-        'uses'=>'Fard@manage',
+        'uses'=>'Fard_controller@manage',
         'as'=>'fard',
     ])->middleware('auth');
 });
