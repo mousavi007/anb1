@@ -54,4 +54,9 @@ Route::post('signup',[
         'uses'=>'Group_kala@delgroup',
         'as'=>'delgroup'
     ])->middleware('auth');
+
+    Route::get('/fard', [
+        'uses'=>'Fard@manage',
+        'as'=>'fard',
+    ])->middleware('auth');
 });
