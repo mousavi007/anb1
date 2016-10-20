@@ -6,10 +6,10 @@
     @include('includes.header')
 @endsection
 @section('content')
-    <div class="container">
+    <div class="container1">
 <h1>گروه کالا</h1>
 @foreach($groupkalas as $group)
-    <div class="well wellright well-sm "> <h3> <strong>{{ $group->group }} </strong></h3> <a id="myButton" href="#" class="btn btn-warning" role="button" autocomplete="off" data-toggle="modal" data-target="#login-modal1" data-whatever="{{ $group->group }}">ویرایش</a> <a href="#" class="btn btn-danger" role="button" data-toggle="modal" data-target="#login-modal3" data-whatever="{{ $group->id }}" >حذف</a></div>
+    <div class="card "> <h3> <strong>{{ $group->group }} </strong></h3> <a id="myButton" href="#" class="btn btn-warning" role="button" autocomplete="off" data-toggle="modal" data-target="#login-modal1" data-whatever="{{ $group->group }}">ویرایش</a> <a href="#" class="btn btn-danger" role="button" data-toggle="modal" data-target="#login-modal3" data-whatever="{{ $group->id }}" >حذف</a></div>
     @endforeach
         <div class="center" >
         <a href="#" class="btn btn-primary btn-lg btn-block" role="button" data-toggle="modal" data-target="#login-modal2">جدید</a>
