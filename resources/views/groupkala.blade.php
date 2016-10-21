@@ -17,7 +17,7 @@
         <div class="modal fade" id="login-modal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
             <div class="modal-dialog">
                 <div class="loginmodal-container">
-                    <h1>ویرایش  گروه کالا</h1><br>
+                    <h1>ویرایش گروه کالا</h1><br>
                     <form action="{{ Route('updategroup') }}" method="post">
                         <input type="text" name="groupbodys" id="groupbody">
                         <input type="submit" name="submit" class="login loginmodal-submit" value="ثبت">
