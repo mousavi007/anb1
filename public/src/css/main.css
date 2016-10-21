@@ -153,7 +153,8 @@ h1 {
     margin-bottom: 10px;
     text-align: right ;
     padding: 10px;
+    padding-top: 2px;
 }
-.container{
+body{
     background: rgba(203, 203, 210, 0.15);
 }

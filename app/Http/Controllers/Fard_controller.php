@@ -12,4 +12,13 @@ class Fard_controller extends Controller
         $fards=Fard::all();
         return view('fard',['fards' => $fards]);
     }
+
+    public function addfard(Request $request){
+
+        $fard= new Fard();
+        $fard->name=$request->name_fard;
+        $fard->semat=$request->semat_fard;
+        $fard->save();
+        return redirect()->back();
+    }
 }

@@ -59,4 +59,10 @@ Route::post('signup',[
         'uses'=>'Fard_controller@manage',
         'as'=>'fard',
     ])->middleware('auth');
+
+    Route::post('addfard',[
+        'uses'=>'Fard_controller@addfard',
+        'as'=>'addfard'
+    ])->middleware('auth');
+
 });
