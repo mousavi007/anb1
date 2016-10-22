@@ -28,7 +28,7 @@
 
                             <ul class="dropdown-menu">
                                 <li><a href="{{Route('groupkala')}}">تعریف گروه کالا</a></li>
-                                <li><a href="#">تعریف فرد</a></li>
+                                <li><a href="{{Route('fard')}}">تعریف فرد</a></li>
                                 <li><a href="#">تعریف اتاق</a></li>
                                 <li><a href="#">تعریف کالا</a></li>
                             </ul>
