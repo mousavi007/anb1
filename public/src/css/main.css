@@ -91,7 +91,7 @@
 }
 
 .loginmodal {
-    text-align: center;
+    text-align: right;
     font-size: 14px;
     font-family: 'Arial', sans-serif;
     font-weight: 700;
@@ -126,7 +126,7 @@
     text-decoration: none;
     color: #666;
     font-weight: 400;
-    text-align: center;
+    text-align: right;
     display: inline-block;
     opacity: 0.6;
     transition: opacity ease 0.5s;
@@ -157,4 +157,7 @@ h1 {
 }
 body{
     background: rgba(203, 203, 210, 0.15);
+}
+label{
+    text-align: right;
 }

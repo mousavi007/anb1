@@ -21,4 +21,12 @@ class Fard_controller extends Controller
         $fard->save();
         return redirect()->back();
     }
+
+    public function updatefard(Request $request){
+        $fard=Fard::where('id',$request->fard_qabl)->first();
+        $fard->name=$request->fard_name1;
+        $fard->semat=$request->fard_semat1;
+        $fard->save();
+        return redirect()->back();
+    }
 }
