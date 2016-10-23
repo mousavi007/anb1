@@ -69,4 +69,9 @@ Route::post('signup',[
         'uses'=>'Fard_controller@updatefard',
         'as'=>'updatefard'
     ])->middleware('auth');
+
+    Route::post('delfard',[
+        'uses'=>'Fard_controller@delfard',
+        'as'=>'delfard'
+    ])->middleware('auth');
 });

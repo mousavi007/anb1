@@ -29,4 +29,12 @@ class Fard_controller extends Controller
         $fard->save();
         return redirect()->back();
     }
+
+    public function delfard(Request $request){
+
+        $id=$request->fard_id2;
+        $fard=Fard::where('id',$id);
+        $fard->delete();
+        return redirect()->back();
+    }
 }
