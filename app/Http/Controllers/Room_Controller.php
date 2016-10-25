@@ -10,7 +10,6 @@ class Room_Controller extends Controller
 {
     public function manage(){
         $rooms=Room::all();
-        $fards=$rooms->fard();
-        return view('room',['fards' => $fards]);
+        return view('room',['rooms' => $rooms]);
     }
 }
