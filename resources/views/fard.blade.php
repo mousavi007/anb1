@@ -45,8 +45,7 @@
                     <input type="submit" name="submit" class="login loginmodal-submit" value="ثبت">
                     <input type="hidden" name="_token" value="{{ Session::token() }}">
                     <input type="hidden" name="fard_qabl" id="fard_qabl">
-                </form>up
-
+                </form>
             </div>
         </div>
     </div>

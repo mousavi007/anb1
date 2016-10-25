@@ -74,4 +74,10 @@ Route::post('signup',[
         'uses'=>'Fard_controller@delfard',
         'as'=>'delfard'
     ])->middleware('auth');
+
+    Route::get('/room', [
+        'uses'=>'Room_Controller@manage',
+        'as'=>'room',
+    ])->middleware('auth');
+    
 });
