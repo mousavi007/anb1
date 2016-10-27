@@ -161,3 +161,7 @@ body{
 label{
     text-align: right;
 }
+#sel1{
+    padding: 10px;
+    margin-bottom: 10px;
+}

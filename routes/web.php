@@ -79,5 +79,14 @@ Route::post('signup',[
         'uses'=>'Room_Controller@manage',
         'as'=>'room',
     ])->middleware('auth');
-    
+
+    Route::post('updateroom',[
+        'uses'=>'Room_Controller@updateroom',
+        'as'=>'updateroom'
+    ])->middleware('auth');
+
+    Route::post('updateroom',[
+        'uses'=>'Room_Controller@updateroom',
+        'as'=>'updateroom'
+    ])->middleware('auth');
 });
