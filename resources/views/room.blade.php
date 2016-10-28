@@ -38,13 +38,13 @@
                     <label form="name_fard">سرپرست</label>
                     <select class="form-control" id="fard" name="fard">
                         @foreach($fards as $fard)
-                        <option value="{{$fard->id}}">{{ $fard->name }}</option>
+                        <option value="{{$fard->name}}">{{ $fard->name }}</option>
                             @endforeach
                     </select>
 
                     <input type="submit" name="submit" class="login loginmodal-submit" value="ثبت">
                     <input type="hidden" name="_token" value="{{ Session::token() }}">
-                    <input type="hidden" name="group_qabl" id="room_id">
+                    <input type="hidden" name="room_id" id="room_id">
                 </form>
 
             </div>

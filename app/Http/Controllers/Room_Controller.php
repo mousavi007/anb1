@@ -16,11 +16,13 @@ class Room_Controller extends Controller
     }
 
     public function updateroom(Request $request){
-        $fard=Fard::where('name',$request->fard);
-        $room=Room::where('id',$request->room_id);
+        $fard=Fard::where('name',$request->fard)->first();
+        $room=Room::where('id',$request->room_id)->first();
         $room->num=$request->num;
         $room->dakheli=$request->dakheli;
         $room->type=$request->type;
         $room->fards_id=$fard->id;
+        $room->save();
+        return redirect()->back();
     }
 }
