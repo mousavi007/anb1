@@ -21,7 +21,9 @@
                 <a id="myButton" href="#" class="btn btn-warning" role="button" autocomplete="off" data-toggle="modal" data-target="#login-modal7" data-whatever="{{ $room->id }}">ویرایش</a> <a href="#" class="btn btn-danger" role="button" data-toggle="modal" data-target="#login-modal6" data-whatever="" >حذف</a>
             </div>
         @endforeach
-
+        <div class="center" >
+            <a href="#" class="btn btn-primary btn-lg btn-block" role="button" data-toggle="modal" data-target="#login-modal8">جدید</a>
+        </div>
     </div>
 
     <div class="modal fade" id="login-modal7" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
@@ -47,6 +49,31 @@
                     <input type="hidden" name="room_id" id="room_id">
                 </form>
 
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="login-modal8" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+        <div class="modal-dialog">
+            <div class="loginmodal-container">
+                <h1>اتاق جدید</h1><br>
+                <form action="{{ Route('addroom') }}" method="post">
+                    <label form="num">شماره اتاق</label>
+                    <input type="text" name="num" id="num">
+                    <label form="dakheli">داخلی</label>
+                    <input type="text" name="dakheli" id="dakheli">
+                    <label form="type">نوع اتاق</label>
+                    <input type="text" name="type" id="type">
+                    <label form="name_fard">سرپرست</label>
+                    <select class="form-control" id="fard" name="fard">
+                        @foreach($fards as $fard)
+                            <option value="{{$fard->id}}">{{ $fard->name }}</option>
+                        @endforeach
+                    </select>
+
+                    <input type="submit" name="submit" class="login loginmodal-submit" value="ثبت">
+                    <input type="hidden" name="_token" value="{{ Session::token() }}">
+                </form>
             </div>
         </div>
     </div>

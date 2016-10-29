@@ -25,4 +25,17 @@ class Room_Controller extends Controller
         $room->save();
         return redirect()->back();
     }
+
+    public function addroom(Requset $requset){
+
+        $room=Room::where('id',$requset->num);
+        if(empty($room)){
+            $room1= new Room();
+            $room1->num=$requset->num;
+            $room1->dakheli=$requset->dakheli;
+            $room1->type=$requset->type;
+            $room1->fards_id=$requset->fard;
+
+        }
+    }
 }
