@@ -95,5 +95,10 @@ Route::post('signup',[
         'as'=>'addroom'
     ])->middleware('auth');
 
+    Route::post('delroom',[
+        'uses'=>'Room_Controller@delroom',
+        'as'=>'delroom'
+    ])->middleware('auth');
 
+    
 });
