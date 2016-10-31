@@ -4,6 +4,8 @@ use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 use Illuminate\Support\Facades\Auth;
+use Carbon\Carbon;
+use Opilo\Farsi\JalaliDate;
 
 class UserController extends Controller
 {
@@ -18,7 +20,10 @@ class UserController extends Controller
         return redirect()->back();
     }
     public function gethome(){
-        return view('home');
+        $dateTime = Carbon::now();
+
+        $jalali=JalaliDate::fromDateTime($dateTime);
+        return view('home',['dates' => $jalali->format('D S M ماه سال X')]);
     }
     public function signup(Request $request)
     {

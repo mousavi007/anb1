@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "ed9df8b872992035f068a7fe461a635a",
-    "content-hash": "76036da3b5b55b91dbe1e1affa01bf9e",
+    "hash": "b0580ad4f98dd2f3d63933f5f7e8512f",
+    "content-hash": "4d20bc74c1845e43f860755d98c883b6",
     "packages": [
         {
             "name": "classpreloader/classpreloader",
@@ -735,6 +735,58 @@
                 "php"
             ],
             "time": "2016-04-19 13:41:41"
+        },
+        {
+            "name": "opilo/farsi",
+            "version": "0.2.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/opilo/farsi.git",
+                "reference": "f0ad3e9372b98b51a9ac6f0ec307a9bc2b500b56"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/opilo/farsi/zipball/f0ad3e9372b98b51a9ac6f0ec307a9bc2b500b56",
+                "reference": "f0ad3e9372b98b51a9ac6f0ec307a9bc2b500b56",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.4"
+            },
+            "require-dev": {
+                "illuminate/filesystem": "^4.2||^5",
+                "illuminate/translation": "^4.2||^5",
+                "illuminate/validation": "^4.2||^5",
+                "phpunit/phpunit": "4.*",
+                "sallar/jdatetime": "dev-master"
+            },
+            "suggest": {
+                "laravel/framework": "This package provides validation facilities for the Laravel Framework (^4.2||^5),"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Opilo\\Farsi\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Hamid Alaei V.",
+                    "email": "hamid@opilo.com"
+                }
+            ],
+            "description": "Farsi Tools for Dates and Numbers and Strings (with Laravel Validation Support)",
+            "keywords": [
+                "Jalali",
+                "farsi",
+                "persian",
+                "shamsi"
+            ],
+            "time": "2016-05-06 07:36:51"
         },
         {
             "name": "paragonie/random_compat",

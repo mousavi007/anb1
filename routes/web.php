@@ -1,6 +1,6 @@
 <?php
 use Illuminate\Support\Facades\DB;
-
+use Opilo\Farsi\JalaliDate;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -11,8 +11,10 @@ use Illuminate\Support\Facades\DB;
 | to using a Closure or controller method. Build something great!
 |
 */
-Route::group(['middleware' => 'web'],function (){
+
+    Route::group(['middleware' => 'web'],function (){
     Route::get('/', function () {
+       
         return view('welcome');
     })->name('welcome');
 
@@ -84,11 +86,7 @@ Route::post('signup',[
         'uses'=>'Room_Controller@updateroom',
         'as'=>'updateroom'
     ])->middleware('auth');
-
-    Route::post('updateroom',[
-        'uses'=>'Room_Controller@updateroom',
-        'as'=>'updateroom'
-    ])->middleware('auth');
+    
 
     Route::post('addroom',[
         'uses'=>'Room_Controller@addroom',
@@ -100,5 +98,15 @@ Route::post('signup',[
         'as'=>'delroom'
     ])->middleware('auth');
 
+    Route::get('/kala', [
+        'uses'=>'Kala_Controller@manage',
+        'as'=>'kala',
+    ])->middleware('auth');
+
+    Route::post('addkala',[
+        'uses'=>'Kala_Controller@addkala',
+        'as'=>'addkala'
+    ])->middleware('auth');
+    
     
 });

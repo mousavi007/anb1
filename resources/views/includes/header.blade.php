@@ -30,7 +30,7 @@
                                 <li><a href="{{Route('groupkala')}}">تعریف گروه کالا</a></li>
                                 <li><a href="{{Route('fard')}}">تعریف فرد</a></li>
                                 <li><a href="{{Route('room')}}">تعریف اتاق</a></li>
-                                <li><a href="#">تعریف کالا</a></li>
+                                <li><a href="{{ Route('kala') }}">تعریف کالا</a></li>
                             </ul>
                         </li>
                         <li class="dropdown">
