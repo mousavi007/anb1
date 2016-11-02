@@ -1,6 +1,7 @@
 <?php
 namespace App\Http\Controllers;
 use App\Groupkala;
+use App\Kala;
 use App\Room;
 use App\Fard;
 use App\User;
@@ -19,6 +20,21 @@ class Kala_controller extends Controller
 
     public function addkala(Request $request)
     {
+        $kala=Kala::where('code_amval',$request->code)->first();
+        if(empty($kala)){
+            $kala1=new Kala();
+            $kala1->name=$request->name;
+            $kala1->groupkalas_id=$request->group_kala;
+            $kala1->code_amval=$request->code;
+            $kala1->room_id=$request->room;
+            $kala1->company=$request->company;
+            $kala1->model=$request->model;
+            $kala1->save();
+        }
+        else
+        {
 
+
+        }
     }
 }
