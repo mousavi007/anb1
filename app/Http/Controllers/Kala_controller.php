@@ -40,7 +40,7 @@ class Kala_controller extends Controller
 
     public function search_kala(Request $request)
     {
-        $kalas=Kala::where('code_amval',$request->code1)->first();
+        $kalas=Kala::where('code_amval',$request->code1)->get();
         if(empty($kalas)){
             return redirect()->back();
             
@@ -48,6 +48,7 @@ class Kala_controller extends Controller
         else
         {
             return view('kalalist',['kalas' => $kalas]);
+
         }
     }
 }
