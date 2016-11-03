@@ -43,12 +43,24 @@
                     <input type="text" name="company" id="company">
                     <label form="type">مدل</label>
                     <input type="text" name="model" id="model">
-
-
-
                     <input type="submit" name="submit" class="login loginmodal-submit" value="ثبت">
                     <input type="hidden" name="_token" value="{{ Session::token() }}">
                 </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="login-modal10" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+        <div class="modal-dialog">
+            <div class="loginmodal-container">
+                <h1> جست و جو </h1><br>
+                <form action="{{ Route('search_kala') }}" method="post">
+                    <label form="num">شماره اموال</label>
+                    <input type="text" name="code" id="code">
+                    <input type="submit" name="submit" class="login loginmodal-submit" value="ثبت">
+                    <input type="hidden" name="_token" value="{{ Session::token() }}">
+                </form>
+
             </div>
         </div>
     </div>

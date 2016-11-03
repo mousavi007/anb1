@@ -37,4 +37,17 @@ class Kala_controller extends Controller
 
         }
     }
+
+    public function search_kala(Request $request)
+    {
+        $kala=Kala::where('code_amval',$request->code);
+        if(empty($kala)){
+            
+            
+        }
+        else
+        {
+            return view('kala_list',['kalas'=> $kala]);
+        }
+    }
 }

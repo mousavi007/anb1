@@ -23,8 +23,8 @@ class CreateKalasTable extends Migration
             $table->timestamps();
             $table->integer('code_amval');
             $table->unique('code_amval');
-            $table->date('start_garranty');
-            $table->date('end_garranty');
+            $table->date('start_garranty')->nullable();
+            $table->date('end_garranty')->nullable();
             $table->string('company');
             $table->string('model');
             Schema::enableForeignKeyConstraints();

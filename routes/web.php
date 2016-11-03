@@ -107,6 +107,10 @@ Route::post('signup',[
         'uses'=>'Kala_Controller@addkala',
         'as'=>'addkala'
     ])->middleware('auth');
-    
-    
+
+
+      Route::post('search_kala',[
+            'uses'=>'Kala_Controller@search_kala',
+            'as'=>'search_kala'
+        ])->middleware('auth');
 });
