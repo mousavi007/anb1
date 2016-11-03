@@ -56,7 +56,7 @@
                 <h1> جست و جو </h1><br>
                 <form action="{{ Route('search_kala') }}" method="post">
                     <label form="num">شماره اموال</label>
-                    <input type="text" name="code" id="code">
+                    <input type="text" name="code1" id="code1">
                     <input type="submit" name="submit" class="login loginmodal-submit" value="ثبت">
                     <input type="hidden" name="_token" value="{{ Session::token() }}">
                 </form>
