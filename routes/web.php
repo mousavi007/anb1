@@ -109,9 +109,9 @@ Route::post('signup',[
     ])->middleware('auth');
 
 
-      Route::post('search_kala',[
+      Route::post('kalalist',[
             'uses'=>'Kala_Controller@search_kala',
-            'as'=>'search_kala'
+            'as'=>'kalalist'
         ])->middleware('auth');
         
         

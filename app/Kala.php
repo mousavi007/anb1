@@ -18,6 +18,6 @@ class Kala extends Model
 
     public function roomname()
     {
-        return Room::where('id', $this->room_id);
+        return Room::where('id', $this->room_id)->first();
     }
 }

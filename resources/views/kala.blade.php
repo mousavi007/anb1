@@ -23,15 +23,15 @@
             <div class="loginmodal-container">
                 <h1>کالای جدید</h1><br>
                 <form action="{{ Route('addkala') }}" method="post">
-                    <label form="num">نام کالا</label>
+                    <label form="name">نام کالا</label>
                     <input type="text" name="name" id="name">
-                    <label form="name_fard">گروه کالا</label>
+                    <label form="group_kala">گروه کالا</label>
                     <select class="form-control" id="group_kala" name="group_kala">
                         @foreach($group_kalas as $group_kala)
                             <option value="{{$group_kala->id}}">{{ $group_kala->group }}</option>
                         @endforeach
                     </select>
-                    <label form="num">شماره اتاق</label>
+                    <label form="room">شماره اتاق</label>
                     <select class="form-control" id="room" name="room">
                         @foreach($rooms as $room)
                             <option value="{{$room->id}}">{{ $room->num}}</option>
@@ -54,8 +54,8 @@
         <div class="modal-dialog">
             <div class="loginmodal-container">
                 <h1> جست و جو </h1><br>
-                <form action="{{ Route('search_kala') }}" method="post">
-                    <label form="num">شماره اموال</label>
+                <form action="{{ Route('kalalist') }}" method="post">
+                    <label form="code1">شماره اموال</label>
                     <input type="text" name="code1" id="code1">
                     <input type="submit" name="submit" class="login loginmodal-submit" value="ثبت">
                     <input type="hidden" name="_token" value="{{ Session::token() }}">
