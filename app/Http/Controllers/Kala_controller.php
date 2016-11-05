@@ -41,14 +41,21 @@ class Kala_controller extends Controller
     public function search_kala(Request $request)
     {
         $kalas=Kala::where('code_amval',$request->code1)->get();
+        $group_kalas=Groupkala::all();
+        $rooms=Room::all();
         if(empty($kalas)){
             return redirect()->back();
             
         }
         else
         {
-            return view('kalalist',['kalas' => $kalas]);
-
+            return view('kalalist',compact('kalas','group_kalas','rooms'));
         }
+    }
+
+    public function updatekala(Request $request)
+    {
+
+
     }
 }

@@ -113,6 +113,11 @@ Route::post('signup',[
             'uses'=>'Kala_Controller@search_kala',
             'as'=>'kalalist'
         ])->middleware('auth');
-        
+
+
+        Route::post('updatekala',[
+            'uses'=>'Kala_Controller@updatekala',
+            'as'=>'updatekala'
+        ])->middleware('auth');
         
 });

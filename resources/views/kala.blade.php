@@ -15,6 +15,8 @@
             <a href="#" class="btn btn-primary btn-lg btn-block" role="button" data-toggle="modal" data-target="#login-modal10">جست و جو</a>
         </div>
 
+        <h1>{{ $rooms[0] }}</h1>
+
     </div>
 
 
@@ -24,7 +26,7 @@
                 <h1>کالای جدید</h1><br>
                 <form action="{{ Route('addkala') }}" method="post">
                     <label form="name">نام کالا</label>
-                    <input type="text" name="name" id="name">
+                    <input type="text" name="name" id="name" >
                     <label form="group_kala">گروه کالا</label>
                     <select class="form-control" id="group_kala" name="group_kala">
                         @foreach($group_kalas as $group_kala)
